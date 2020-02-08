@@ -1,0 +1,65 @@
+{
+	"providers": {
+		"awscloudformation": {
+			"AuthRoleName": "amplify-commissions-comenv-143030-authRole",
+			"UnauthRoleArn": "arn:aws:iam::470240191735:role/amplify-commissions-comenv-143030-unauthRole",
+			"AuthRoleArn": "arn:aws:iam::470240191735:role/amplify-commissions-comenv-143030-authRole",
+			"Region": "us-east-1",
+			"DeploymentBucketName": "amplify-commissions-comenv-143030-deployment",
+			"UnauthRoleName": "amplify-commissions-comenv-143030-unauthRole",
+			"StackName": "amplify-commissions-comenv-143030",
+			"StackId": "arn:aws:cloudformation:us-east-1:470240191735:stack/amplify-commissions-comenv-143030/23abf990-4917-11ea-b271-0e9711d18427",
+			"AmplifyAppId": "dop80j38deoq3"
+		}
+	},
+	"api": {
+		"commissions": {
+			"service": "AppSync",
+			"providerPlugin": "awscloudformation",
+			"output": {
+				"authConfig": {
+					"additionalAuthenticationProviders": [],
+					"defaultAuthentication": {
+						"authenticationType": "API_KEY",
+						"apiKeyConfig": {
+							"description": "commission desc",
+							"apiKeyExpirationDays": "180"
+						}
+					}
+				},
+				"GraphQLAPIIdOutput": "txchwo6e6jf7forqmrmgncbkzq",
+				"GraphQLAPIEndpointOutput": "https://kotk6iihwbdarfsxi6ba24edpa.appsync-api.us-east-1.amazonaws.com/graphql",
+				"GraphQLAPIKeyOutput": "da2-rblvcsjebzauhosib2gg2jyye4"
+			},
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/amplify-commissions-comenv-143030-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+				"logicalId": "apicommissions"
+			},
+			"lastPushTimeStamp": "2020-02-06T19:48:39.361Z",
+			"lastPushDirHash": "wpshalQiJAhpCgs/7p/hNmIEXew="
+		}
+	},
+	"auth": {
+		"commissions54393819": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": [],
+			"customAuth": false,
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/amplify-commissions-comenv-143030-deployment/amplify-cfn-templates/auth/commissions54393819-cloudformation-template.yml",
+				"logicalId": "authcommissions54393819"
+			},
+			"lastPushTimeStamp": "2020-02-06T19:48:39.367Z",
+			"output": {
+				"AppClientSecret": "1dtg30g7qn09ubihmrivsk5tjdpp339a2eq57ek3too63qt1b4ee",
+				"UserPoolId": "us-east-1_VrQIBNXfC",
+				"AppClientIDWeb": "4steq80hot2ma9c7v1rksuqboo",
+				"AppClientID": "2jvtcfn8054g6o7bhtgvietb65",
+				"IdentityPoolId": "us-east-1:04490505-3307-46aa-9a31-077fd2f10113",
+				"IdentityPoolName": "commissions54393819_identitypool_54393819__comenv",
+				"UserPoolName": "commissions54393819_userpool_54393819"
+			},
+			"lastPushDirHash": "/Kgqbqmxaw36Fs85h2vXUTLfcT4="
+		}
+	}
+}

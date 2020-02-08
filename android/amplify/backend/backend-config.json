@@ -1,0 +1,28 @@
+{
+	"api": {
+		"commissions": {
+			"service": "AppSync",
+			"providerPlugin": "awscloudformation",
+			"output": {
+				"authConfig": {
+					"additionalAuthenticationProviders": [],
+					"defaultAuthentication": {
+						"authenticationType": "API_KEY",
+						"apiKeyConfig": {
+							"description": "commission desc",
+							"apiKeyExpirationDays": "180"
+						}
+					}
+				}
+			}
+		}
+	},
+	"auth": {
+		"commissions54393819": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": [],
+			"customAuth": false
+		}
+	}
+}

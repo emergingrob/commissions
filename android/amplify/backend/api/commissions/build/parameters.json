@@ -1,0 +1,8 @@
+{
+    "CreateAPIKey": 1,
+    "AppSyncApiName": "commissions",
+    "DynamoDBBillingMode": "PAY_PER_REQUEST",
+    "DynamoDBEnableServerSideEncryption": "false",
+    "S3DeploymentBucket": "amplify-commissions-comenv-143030-deployment",
+    "S3DeploymentRootKey": "amplify-appsync-files/97f2a109265798c27cf6f802cb3d3440efb24ca6"
+}
