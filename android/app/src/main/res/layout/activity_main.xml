@@ -5,7 +5,7 @@
     android:orientation="vertical" >
 
     <EditText
-        android:id="@+id/editText1"
+        android:id="@+id/editDateText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
@@ -14,242 +14,275 @@
         android:hint="Select Date" />
 
 
-    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="10dp"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp" >
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="none"
+        android:layout_below="@+id/editDateText"
+        android:layout_weight="1">
+
+        <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
 
 
-        <TableRow android:background="#0079D6" android:padding="5dp">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Bucket" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Amount" />
-        </TableRow>
-        <TableRow android:background="#DAE8FC" android:padding="5dp">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Accessory Sales" />
-            <TextView
-                android:id="@+id/accessory_bucket"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
+            <TableRow android:background="#0079D6" android:padding="5dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Bucket" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Amount" />
+            </TableRow>
+            <TableRow android:background="#DAE8FC" android:padding="5dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Accessory Sales" />
+                <TextView
+                    android:id="@+id/accessory_bucket"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
 
-                android:text="$00.00" />
-            <EditText
-                android:id="@+id/edit_accessories"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="8"
-                android:inputType="numberDecimal"
-                android:hint="00.00" />
-        </TableRow>
-        <TableRow android:background="#DAE8FC" android:padding="5dp">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="TMP" />
-            <TextView
-                android:id="@+id/tmp_bucket"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="$00.00" />
-            <EditText
-                android:id="@+id/edit_tmp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="8"
-                android:inputType="number"
-                android:hint="0" />
-        </TableRow>
-        <TableRow android:background="#DAE8FC" android:padding="5dp">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="TMP-MD" />
-            <TextView
-                android:id="@+id/tmp_md_bucket"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="$00.00" />
-            <EditText
-                android:id="@+id/edit_tmp_md"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="8"
-                android:inputType="number"
-                android:hint="0" />
-        </TableRow>
-        <TableRow android:background="#DAE8FC" android:padding="5dp">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="VZ Protect" />
-            <TextView
-                android:id="@+id/vzp_bucket"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="$00.00" />
-            <EditText
-                android:id="@+id/edit_vzp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="8"
-                android:inputType="number"
-                android:hint="0" />
-        </TableRow>
-        <TableRow android:background="#DAE8FC" android:padding="5dp">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="VZ Protect-MD" />
-            <TextView
-                android:id="@+id/vzpmd_bucket"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="$00.00" />
-            <EditText
-                android:id="@+id/edit_vzpmd"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="8"
-                android:inputType="number"
-                android:hint="0" />
-        </TableRow>
+                    android:text="$00.00" />
+                <EditText
+                    android:id="@+id/edit_accessories"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="8"
 
-        <TableRow android:background="#DAE8FC" android:padding="5dp">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Tablets" />
-            <TextView
-                android:id="@+id/tablets_bucket"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="$00.00" />
-            <EditText
-                android:id="@+id/edit_tablets"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="8"
-                android:inputType="number"
-                android:hint="0" />
-        </TableRow>
-        <TableRow android:background="#DAE8FC" android:padding="5dp">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Jetpacks" />
-            <TextView
-                android:id="@+id/jetpacks_bucket"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="$00.00" />
-            <EditText
-                android:id="@+id/edit_jetpacks"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="8"
-                android:inputType="number"
-                android:hint="0" />
-        </TableRow>
-        <TableRow android:background="#DAE8FC" android:padding="5dp">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Hums" />
-            <TextView
-                android:id="@+id/hums_bucket"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="$00.00" />
-            <EditText
-                android:id="@+id/edit_hums"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="8"
-                android:inputType="number"
-                android:hint="0" />
-        </TableRow>
-        <TableRow android:background="#DAE8FC" android:padding="5dp">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Hum X" />
-            <TextView
-                android:id="@+id/humx_bucket"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="$00.00" />
-            <EditText
-                android:id="@+id/edit_humx"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="8"
-                android:inputType="number"
-                android:hint="0" />
-        </TableRow>
-        <TableRow android:background="#DAE8FC" android:padding="5dp">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Native Dialer" />
-            <TextView
-                android:id="@+id/native_dialer_bucket"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="$00.00" />
-            <EditText
-                android:id="@+id/edit_native_dialer"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="8"
-                android:inputType="number"
-                android:hint="0" />
-        </TableRow>
-    </TableLayout>
+                    android:hint="00.00" />
+            </TableRow>
+            <TableRow android:background="#DAE8FC" android:padding="5dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="TMP" />
+                <TextView
+                    android:id="@+id/tmp_bucket"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="$00.00" />
+                <EditText
+                    android:id="@+id/edit_tmp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="8"
+                    android:inputType="number"
+                    android:hint="0" />
+            </TableRow>
+            <TableRow android:background="#DAE8FC" android:padding="5dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="TMP-MD" />
+                <TextView
+                    android:id="@+id/tmp_md_bucket"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="$00.00" />
+                <EditText
+                    android:id="@+id/edit_tmp_md"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="8"
+                    android:inputType="number"
+                    android:hint="0" />
+            </TableRow>
+            <TableRow android:background="#DAE8FC" android:padding="5dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="VZ Protect" />
+                <TextView
+                    android:id="@+id/vzp_bucket"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="$00.00" />
+                <EditText
+                    android:id="@+id/edit_vzp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="8"
+                    android:inputType="number"
+                    android:hint="0" />
+            </TableRow>
+            <TableRow android:background="#DAE8FC" android:padding="5dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="VZ Protect-MD" />
+                <TextView
+                    android:id="@+id/vzpmd_bucket"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="$00.00" />
+                <EditText
+                    android:id="@+id/edit_vzpmd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="8"
+                    android:inputType="number"
+                    android:hint="0" />
+            </TableRow>
+
+            <TableRow android:background="#DAE8FC" android:padding="5dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Tablets" />
+                <TextView
+                    android:id="@+id/tablets_bucket"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="$00.00" />
+                <EditText
+                    android:id="@+id/edit_tablets"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="8"
+                    android:inputType="number"
+                    android:hint="0" />
+            </TableRow>
+            <TableRow android:background="#DAE8FC" android:padding="5dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Jetpacks" />
+                <TextView
+                    android:id="@+id/jetpacks_bucket"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="$00.00" />
+                <EditText
+                    android:id="@+id/edit_jetpacks"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="8"
+                    android:inputType="number"
+                    android:hint="0" />
+            </TableRow>
+            <TableRow android:background="#DAE8FC" android:padding="5dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Hums" />
+                <TextView
+                    android:id="@+id/hums_bucket"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="$00.00" />
+                <EditText
+                    android:id="@+id/edit_hums"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="8"
+
+                    android:hint="0" />
+            </TableRow>
+            <TableRow android:background="#DAE8FC" android:padding="5dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Hum X" />
+                <TextView
+                    android:id="@+id/humx_bucket"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="$00.00" />
+                <EditText
+                    android:id="@+id/edit_humx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="8"
+                    android:inputType="number"
+                    android:hint="0" />
+            </TableRow>
+            <TableRow android:background="#DAE8FC" android:padding="5dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Native Dialer" />
+                <TextView
+                    android:id="@+id/native_dialer_bucket"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="$00.00" />
+                <EditText
+                    android:id="@+id/edit_native_dialer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="8"
+                    android:inputType="number"
+                    android:hint="0" />
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:background="#F7FCF2">
+
+        <TextView
+            android:id="@+id/editTotalBucket"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:hint="$1,004.50"
+            android:textSize="35dp"
+            android:ems="5"
+            />
+    </LinearLayout>
+
 </RelativeLayout>
