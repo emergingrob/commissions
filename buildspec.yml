@@ -3,9 +3,9 @@ version: 0.2
 phases:
   build:
     commands:
-      - chmod +x android/gradlew
-      - android/gradlew assembleDebug
+      - chmod +x ./android/gradlew
+      - ./android/gradlew assembleDebug
 artifacts:
   files:
-     - 'android/app/build/outputs/**/*.apk'
+     - './android/app/build/outputs/**/*.apk'
   discard-paths: yes
