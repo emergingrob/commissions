@@ -1,0 +1,20 @@
+{
+    "comenv": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-commissions-comenv-222622-authRole",
+            "UnauthRoleArn": "arn:aws:iam::470240191735:role/amplify-commissions-comenv-222622-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::470240191735:role/amplify-commissions-comenv-222622-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "amplify-commissions-comenv-222622-deployment",
+            "UnauthRoleName": "amplify-commissions-comenv-222622-unauthRole",
+            "StackName": "amplify-commissions-comenv-222622",
+            "StackId": "arn:aws:cloudformation:us-east-1:470240191735:stack/amplify-commissions-comenv-222622/474740f0-5135-11ea-8c41-0e660dd6b3d4",
+            "AmplifyAppId": "d1kl2txiz5bfa7"
+        },
+        "categories": {
+            "auth": {
+                "commissions0dcdcb7c": {}
+            }
+        }
+    }
+}
